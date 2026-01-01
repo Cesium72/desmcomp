@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Desmos Computer | Assembler</title>
+    <link rel="stylesheet"href="styles.css"/>
+</head>
+<body>
+  <h1>Desmos Computer Assembler</h1>
+  <div id="aside">
+    <button onclick="show('program')">Program</button>
+    <button onclick="show('mmap')">Memory Map</button>
+    <button onclick="show('constant')">Constants</button>
+    <a>Assembly Tutorial</a>
+    <a>Program Upload Help</a>
+    <button>Sample Programs</button>
+    <button onclick="download()">Download Program</button>
+    <label for="upload">Upload Program</label>
+    <input type="file"id="upload"style="display:none;"/>
+  </div>
+  <footer>Made by Cesium72</footer>
+  <div id="wrapper">
+    <p></p>
+    <textarea style="display:none;"id="prog"spellcheck="false"># Your program goes here
+.begin
+outsc #msg #endmsg
+halt
+jmp #begin 1</textarea>
+    <textarea style="display:none;"id="mmap"spellcheck="false"># Allocated memory for your program goes here
+_2</textarea>
+    <textarea style="display:none;"id="const"spellcheck="false"># Constant values for your program go here
+.msg
+'Hello, world!
+&nl
+:endmsg
+</textarea>
+  </div>
+  <div id="result">
+    <button onclick="everything()">Assemble</button>
+    <pre id="feedback">Click "Assemble" to See Results...</pre>
+  </div>
+  <script src="assemble.js"></script>
+</body>
+</html>
