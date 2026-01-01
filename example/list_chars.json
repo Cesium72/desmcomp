@@ -1,0 +1,1 @@
+{"program":"# Your program goes here\noutsc #msg #endmsg\n.loop\nout *#idx 1\n+ *#idx 1\nset #idx r\n~ *#idx 122\njmp #loop r\n\n.forever\nhalt\njmp #forever 1","mmap":"# Allocated memory for your program goes here\n.idx\n_1","constant":"# Constant values for your program go here\n.msg\n'Whole printable character set: \n:endmsg"}
