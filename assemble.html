@@ -12,12 +12,12 @@
     <button onclick="show('constant')">Constants</button>
     <a>Assembly Tutorial</a>
     <a>Program Upload Help</a>
-    <button>Sample Programs</button>
+    <button onclick="showEx('block')">Sample Programs</button>
     <button onclick="download()">Download Program</button>
     <label for="upload">Upload Program</label>
     <input type="file"id="upload"style="display:none;"/>
   </div>
-  <footer>Made by Cesium72</footer>
+  <footer>Made by Caden O'Kellylee</footer>
   <div id="wrapper">
     <p></p>
     <textarea style="display:none;"id="prog"spellcheck="false"># Your program goes here
@@ -38,6 +38,7 @@ _2</textarea>
     <button onclick="everything()">Assemble</button>
     <pre id="feedback">Click "Assemble" to See Results...</pre>
   </div>
+  <div id="examples"><button onclick="showEx('none')">Cancel</button><h3>Choose an Example Program to Load:</h3><ul></ul></div>
   <script src="assemble.js"></script>
 </body>
 </html>

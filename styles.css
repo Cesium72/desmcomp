@@ -1,114 +1,150 @@
 body {
-  background-color:black;
-  color:white;
-  font-family:monospace;
-  overflow:hidden;
-  padding:0;
-  margin:0;
+    background-color:black;
+    color:white;
+    font-family:monospace;
+    overflow:hidden;
+    padding:0;
+    margin:0;
 }
 
 body > * {
-  margin:0;
-  padding:0;
-  position:absolute;
-  border:1px solid gray;
+    margin:0;
+    padding:0;
+    position:absolute;
+    border:1px solid gray;
 }
 
 h1 {
-  width:100vw;
-  height:5vh;
-  text-align:center;
-  top:0px;
-  position:absolute;
+    width:100vw;
+    height:5vh;
+    text-align:center;
+    top:0px;
+    position:absolute;
 }
 
 #aside {
-  width:20vw;
-  height:90vh;
-  top:5vh;
+    width:20vw;
+    height:90vh;
+    top:5vh;
 }
 
 #aside button, #aside a, #aside label {
-  border:none;
-  outline:none;
-  background-color:black;
-  width:20vw;
-  border-radius:5px;
-  color:white;
-  text-align:left;
-  height:20px;
-  margin:4px;
-  display:block;
-  padding:2px;
-  cursor:pointer;
-  width:18vw;
+    border:none;
+    outline:none;
+    background-color:black;
+    width:20vw;
+    border-radius:5px;
+    color:white;
+    text-align:left;
+    height:20px;
+    margin:4px;
+    display:block;
+    padding:2px;
+    cursor:pointer;
+    width:18vw;
 }
 
 #aside *:hover {
-  background-color:#676767;
+    background-color:#676767;
 }
 
 footer {
-  width:20vw;
-  height:5vh;
-  text-align:center;
-  color:#808080;
-  top:95vh;
-  padding-top:1.5vh;
+    width:20vw;
+    height:5vh;
+    text-align:center;
+    color:#808080;
+    top:95vh;
+    padding-top:1.5vh;
 }
 
 p {
-  width:4ch;
-  text-align:right;
-  border-right:1px solid gray;
-  float:left;
-  margin:0;
+    width:4ch;
+    text-align:right;
+    border-right:1px solid gray;
+    float:left;
+    margin:0;
 }
 
 #wrapper {
-  left:20vw;
-  top:5vh;
-  padding:0;
-  margin:0;
-  border:none;
-  overflow-y:auto;
-  height:95vh;
-  border-top:1px solid gray;
+    left:20vw;
+    top:5vh;
+    padding:0;
+    margin:0;
+    border:none;
+    overflow-y:auto;
+    height:95vh;
+    border-top:1px solid gray;
 }
 
 textarea {
-  background-color:black;
-  resize:none;
-  field-sizing:content;
-  width:calc(40vw - 4ch);
-  outline:none;
-  color:white;
-  white-space:pre;
-  overflow-x:auto
-  float:right;
-  border:none;
+    background-color:black;
+    resize:none;
+    field-sizing:content;
+    width:calc(40vw - 4ch);
+    outline:none;
+    color:white;
+    white-space:pre;
+    overflow-x:auto;
+    float:right;
+    border:none;
 }
 
 #result {
-  width:40vw;
-  left:60vw;
-  top:5vh;
-  height:95vh;
+    width:40vw;
+    left:60vw;
+    top:5vh;
+    height:95vh;
 }
 
 #result button {
-  width:40vw;
-  border:1px solid gray;
-  outline:none;
-  background-color:black;
-  color:white;
-  text-align:center;
-  cursor:pointer;
-  font-size:1.5rem;
+    width:40vw;
+    border:1px solid gray;
+    outline:none;
+    background-color:black;
+    color:white;
+    text-align:center;
+    cursor:pointer;
+    font-size:1.5rem;
 }
 
 pre {
-  white-space:pre-wrap;
-  overflow-wrap:break-word;
-  padding-left:3px;
+    white-space:pre-wrap;
+    overflow-wrap:break-word;
+    padding-left:3px;
+}
+
+#examples {
+    display:none;
+    width:100vw;
+    height:100vh;
+    background-color:black;
+    z-index:1;
+    border:none;
+    padding:1vh 1vw;
+}
+
+#examples button {
+    border:1px solid gray;
+    outline:none;
+    background-color:black;
+    width:98vw;
+    color:white;
+    font-size:1.5rem;
+    cursor:pointer;
+}
+
+#examples ul {
+    list-style-type:none;
+}
+
+#examples li {
+    cursor:pointer;
+    border:1px solid black;
+    margin:3px;
+    padding:3px;
+    width:30vw;
+}
+
+#examples li:hover {
+    border:1px solid gray;
 }

@@ -6,6 +6,8 @@ with it. However, you might want to make
 some improvements - this was rushed.
 */
 
+const examples = ["run_onload", "list_chars", "guess_game", "greet_me"];
+
 const table = {
   "nop":10,
   "set":11,
@@ -300,8 +302,8 @@ function asmProg(program, mmap, constants) {
 // 'Button Presses: 
 // :endmsg`;
 
-const CONSTANTS = `# Constant section
-_2`;
+// const CONSTANTS = `# Constant section
+// _2`;
 
 // BELOW: STUFF NOT FOR THE ASSEMBLY PROCESS
 
@@ -390,3 +392,24 @@ function everything() {
 }
 
 show("program");
+
+// BELOW: STUFF FOR EXAMPLE PROGRAMS
+
+function showEx(arg) {
+    document.getElementById("examples").style.display = arg;
+}
+
+for(var i of examples) {
+    document.querySelector("#examples ul").innerHTML += `<li onclick="load('${i}')">${i}</li>`;
+}
+
+async function load(name) {
+    if(!confirm("Opening this program will overwrite the current program being edited. Continue?"))
+        return;
+    let result = await (await fetch(`examples/${name}.json`)).json();
+    for(var i of ["program", "mmap", "constant"]) {
+        areas[i].value = result[i];
+    }
+    show("program");
+    showEx("none");
+}
