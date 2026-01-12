@@ -78,7 +78,8 @@ const entities = {
   "lj":117,
   "bj":118,
   "tj":119,
-  "nw_corn":120
+  "nw_corn":120,
+  "sp":121
 };
 
 const num = a => (a < 1000 ? 1000 + a : 6000 + a);
@@ -339,10 +340,10 @@ function show(tab) {
 function copyResult(str) {
   navigator.clipboard.writeText(str)
     .then(() => {
-      pre.textContent = "Program assembled with no errors and copied to clipboard. To upload:\n1) Create a new line in the expression list of the Desmos Computer\n2) Paste the expression that was just automatically copied onto the line you just created\n3) Navigate to the program you want to overwrite in the program menu, or make a new program\n4) The line you pasted into the expression list should be an action, so click the little arrow to the left of it\n\nFor more help, click \"Program Upload Help\" in the left sidebar";
+      pre.textContent = "Program assembled with no errors and copied to clipboard.\nFor help on how to upload the program, click \"Program Upload Help\" in the left sidebar";
     })
     .catch(err => {
-      pre.textContent = "Program assembled with no errors, but couldn't be copied to clipboard. Try changing browser permissions, or copying the result below manually (be sure not to include any extra whitespace at the beginning or end)\n\n" + str
+      pre.textContent = "Program assembled with no errors, but couldn't be copied to clipboard.\nTry changing browser's permissions, or copying the result below manually (be sure not to include any extra whitespace at the beginning or end)\n\n" + str
     });
 }
 
@@ -406,7 +407,7 @@ for(var i of examples) {
 async function load(name) {
     if(!confirm("Opening this program will overwrite the current program being edited. Continue?"))
         return;
-    let result = await (await fetch(`example/${name}.json`)).json();
+    let result = await (await fetch(`examples/${name}.json`)).json();
     for(var i of ["program", "mmap", "constant"]) {
         areas[i].value = result[i];
     }

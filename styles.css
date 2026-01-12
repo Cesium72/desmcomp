@@ -42,6 +42,7 @@ h1 {
     padding:2px;
     cursor:pointer;
     width:18vw;
+    text-decoration:none;
 }
 
 #aside *:hover {
