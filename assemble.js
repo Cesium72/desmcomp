@@ -407,7 +407,7 @@ for(var i of examples) {
 async function load(name) {
     if(!confirm("Opening this program will overwrite the current program being edited. Continue?"))
         return;
-    let result = await (await fetch(`examples/${name}.json`)).json();
+    let result = await (await fetch(`example/${name}.json`)).json();
     for(var i of ["program", "mmap", "constant"]) {
         areas[i].value = result[i];
     }
