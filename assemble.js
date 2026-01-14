@@ -118,7 +118,7 @@ function assemble(line, prog) {
   }
   let arg1 = (lineSplit[1] ? expr(lineSplit[1]) : 1000);
   let arg2 = (lineSplit[2] ? expr(lineSplit[2]) : 1000);
-  if(arg1 < 0 || arg2 < 0) {
+  if(arg1 < 0 || arg2 < 0 || isNaN(arg1) || isNaN(arg2)) {
     error("Invalid argument");
   }
   if(!table[lineSplit[0]]) {
