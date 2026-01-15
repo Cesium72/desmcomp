@@ -6,7 +6,7 @@ with it. However, you might want to make
 some improvements - this was rushed.
 */
 
-const examples = ["run_onload", "list_chars", "guess_game", "greet_me", "rck_pr_srs"];
+const examples = ["run_onload", "list_chars", "guess_game", "greet_me", "rck_pr_srs", "prime_find"];
 
 const table = {
   "nop":10,
